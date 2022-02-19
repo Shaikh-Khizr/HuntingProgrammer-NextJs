@@ -3,8 +3,11 @@ import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+// import styles1 from "../styles/Home1.module.css";
+// import styles2 from "../styles/Home2.module.css";
 
 export default function Home() {
+  // console.log(styles);
   return (
     <div className={styles.container}>
       <Head>
@@ -48,7 +51,8 @@ export default function Home() {
           A blog for hunting programmers by hunting programmer
         </p>
 
-        <div className="blogs">
+        {/* <div className={`${styles1.container} ${styles2.container}`}> */}
+        <div>
           <h2>Popular Blogs</h2>
           <div className="blogItem">
             <h3>How to learn JavaScript in 2022?</h3>
