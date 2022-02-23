@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -23,32 +22,7 @@ export default function Home() {
           name="keywords"
           content="nextjs, huntingprogrammer blog, hunting blog"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className={styles.mainnav}>
-        <ul>
-          <Link href="/">
-            <a>
-              <li>Home</li>
-            </a>
-          </Link>
-          <Link href="/about">
-            <a>
-              <li>About</li>
-            </a>
-          </Link>
-          <Link href="/blog">
-            <a>
-              <li>Blog</li>
-            </a>
-          </Link>
-          <Link href="/contact">
-            <a>
-              <li>Contact</li>
-            </a>
-          </Link>
-        </ul>
-      </nav>
       <main className={styles.main}>
         <h1 className={styles.title}><span>Hunting Programmer</span></h1>
         <div className={styles.imgWrapper}>
