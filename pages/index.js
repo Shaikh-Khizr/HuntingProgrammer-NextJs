@@ -33,7 +33,7 @@ export default function Home() {
         </p>
 
         <div>
-          <h2>Popular Blogs</h2>
+          <h2>Latest Blogs</h2>
           <div className="blogItem">
             <h3>How to learn JavaScript in 2022?</h3>
             <p>JavaScript is the language used to design logic for the web</p>
