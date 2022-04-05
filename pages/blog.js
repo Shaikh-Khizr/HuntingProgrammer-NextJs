@@ -12,7 +12,6 @@ const Blog = () => {
     fetch("http://localhost:3000/api/blogs").then((response) => {
       return response.json();
     }).then((data) => {
-      console.log(data);
       setBlogs(data);
     })
   }, []);
