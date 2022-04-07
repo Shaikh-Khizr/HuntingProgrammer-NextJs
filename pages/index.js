@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -26,7 +25,8 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}><span>Hunting Programmer</span></h1>
         <div className={styles.imgWrapper}>
-        <Image src='/homeimg.jpg' alt="home-img" className={styles.myImg} width={672} height={448} />
+        {/* <Image src='/homeimg.jpg' alt="home-img" className={styles.myImg} width={672} height={448} /> */}
+        <img src='/homeimg.jpg' alt="home-img" className={styles.myImg} width={672} height={448} />
         </div>
         <p className={styles.description}>
           A blog for hunting programmers by hunting programmer
