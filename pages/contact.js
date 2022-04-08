@@ -55,24 +55,24 @@ const Contact = () => {
       <form onSubmit={handleSubmit}>
         <div className={styles.mb3}>
           <label htmlFor="name" className={styles.formlabel}> Name </label>
-          <input type="text" className="form-control" id="name" name="name" value={name} onChange={handleOnChange} />
+          <input type="text" className={styles.input} id="name" name="name" value={name} onChange={handleOnChange} required />
         </div>
         <div className={styles.mb3}>
           <label htmlFor="email" className={styles.formlabel}> Email address </label>
-          <input type="email" className="form-control" id="email" name="email" value={email} onChange={handleOnChange} />
-          <div id="emailHelp" className="form-text">
+          <input type="email" className={styles.input} id="email" name="email" value={email} onChange={handleOnChange} required />
+          <div id="emailHelp" className={styles.formtext}>
             We&apos;ll never share your email with anyone else.
           </div>
         </div>
         <div className={styles.mb3}>
           <label htmlFor="phone" className={styles.formlabel}> Phone </label>
-          <input type="text" className="form-control" id="phone" name="phone" value={phone} onChange={handleOnChange} />
+          <input type="text" className={styles.input} id="phone" name="phone" value={phone} onChange={handleOnChange} required />
         </div>
         <div className={styles.mb3}>
-          <label htmlFor="desc"> Elaborate your concern </label>
-          <textarea className="form-control" placeholder="Write your concern here" id="desc" name="desc" value={desc} onChange={handleOnChange} />
+          <label htmlFor="desc" className={styles.formlabel}> Elaborate your concern </label>
+          <textarea className={styles.input} id="desc" name="desc" value={desc} onChange={handleOnChange} required />
         </div>
-        <button type="submit" className="btn btn-primary"> Submit </button>
+        <button type="submit" className={styles.btn}> Submit </button>
       </form>
     </div>
   );
