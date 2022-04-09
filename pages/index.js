@@ -14,33 +14,52 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.imgWrapper}>
-        {/* <Image src='/homeimg.jpg' alt="home-img" className={styles.myImg} width={672} height={448} /> */}
-        <img src='/homeimg.jpg' alt="home-img" className={styles.myImg} width={572} height={400} />
+          {/* <Image src='/homeimg.jpg' alt="home-img" className={styles.myImg} width={672} height={448} /> */}
+          <img
+            src="/homeimg.jpg"
+            alt="home-img"
+            className={styles.myImg}
+            width={372}
+            height={300}
+          />
         </div>
-        <h1 className={styles.title}><span>&lt;HuntingProgrammer /&gt;</span></h1>
+        <h1 className={styles.title}>
+          <span>&lt;HuntingProgrammer /&gt;</span>
+        </h1>
 
         <div>
           <h2 className={styles.h2}>Latest Blogs</h2>
           <div>
             <h3 className={styles.h3}>How to learn JavaScript in 2022?</h3>
-            <p className={styles.p}>JavaScript is the language used to design logic for the web. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, exercitationem.</p>
+            <p className={styles.p}>
+              JavaScript is the language used to design logic for the web. Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae,
+              exercitationem.
+            </p>
             <button className={styles.btn}>Read More</button>
           </div>
           <div>
             <h3 className={styles.h3}>How to learn JavaScript in 2022?</h3>
-            <p className={styles.p}>JavaScript is the language used to design logic for the web. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, exercitationem.</p>
+            <p className={styles.p}>
+              JavaScript is the language used to design logic for the web. Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae,
+              exercitationem.
+            </p>
             <button className={styles.btn}>Read More</button>
           </div>
           <div>
             <h3 className={styles.h3}>How to learn JavaScript in 2022?</h3>
-            <p className={styles.p}>JavaScript is the language used to design logic for the web. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, exercitationem.</p>
+            <p className={styles.p}>
+              JavaScript is the language used to design logic for the web. Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae,
+              exercitationem.
+            </p>
             <button className={styles.btn}>Read More</button>
           </div>
         </div>
       </main>
 
-      <footer className={styles.footer}>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 }

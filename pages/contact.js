@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import styles from "../styles/Contact.module.css";
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [desc, setDesc] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [desc, setDesc] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, phone, desc);
 
     const data = { name, email, phone, desc };
 
@@ -20,59 +19,101 @@ const Contact = () => {
       },
       body: JSON.stringify(data),
     })
-    .then((response) => response.text())
-    .then((data) => {
-      console.log("Success:", data);
-      alert("Thanks for contacting us");
-      setName('');
-      setEmail('');
-      setPhone('');
-      setDesc('');
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+      .then((response) => response.text())
+      .then((data) => {
+        alert("Thanks for contacting us");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setDesc("");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
-  
+
   const handleOnChange = (e) => {
-    if (e.target.name == 'name') {
+    if (e.target.name == "name") {
       setName(e.target.value);
-    }
-    else if (e.target.name == 'email') {
+    } else if (e.target.name == "email") {
       setEmail(e.target.value);
-    }
-    else if (e.target.name == 'phone') {
+    } else if (e.target.name == "phone") {
       setPhone(e.target.value);
-    }
-    else if (e.target.name == 'desc') {
+    } else if (e.target.name == "desc") {
       setDesc(e.target.value);
     }
   };
-  
+
   return (
     <div className={styles.container}>
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit}>
         <div className={styles.mb3}>
-          <label htmlFor="name" className={styles.formlabel}> Name </label>
-          <input type="text" className={styles.input} id="name" name="name" value={name} onChange={handleOnChange} required />
+          <label htmlFor="name" className={styles.formlabel}>
+            {" "}
+            Name{" "}
+          </label>
+          <input
+            type="text"
+            className={styles.input}
+            id="name"
+            name="name"
+            value={name}
+            onChange={handleOnChange}
+            required
+          />
         </div>
         <div className={styles.mb3}>
-          <label htmlFor="email" className={styles.formlabel}> Email address </label>
-          <input type="email" className={styles.input} id="email" name="email" value={email} onChange={handleOnChange} required />
+          <label htmlFor="email" className={styles.formlabel}>
+            {" "}
+            Email address{" "}
+          </label>
+          <input
+            type="email"
+            className={styles.input}
+            id="email"
+            name="email"
+            value={email}
+            onChange={handleOnChange}
+            required
+          />
           <div id="emailHelp" className={styles.formtext}>
             We&apos;ll never share your email with anyone else.
           </div>
         </div>
         <div className={styles.mb3}>
-          <label htmlFor="phone" className={styles.formlabel}> Phone </label>
-          <input type="text" className={styles.input} id="phone" name="phone" value={phone} onChange={handleOnChange} required />
+          <label htmlFor="phone" className={styles.formlabel}>
+            {" "}
+            Phone{" "}
+          </label>
+          <input
+            type="tel"
+            className={styles.input}
+            id="phone"
+            name="phone"
+            value={phone}
+            onChange={handleOnChange}
+            required
+          />
         </div>
         <div className={styles.mb3}>
-          <label htmlFor="desc" className={styles.formlabel}> Elaborate your concern </label>
-          <textarea className={styles.input} id="desc" name="desc" value={desc} onChange={handleOnChange} required />
+          <label htmlFor="desc" className={styles.formlabel}>
+            {" "}
+            Elaborate your concern{" "}
+          </label>
+          <textarea
+            className={styles.input}
+            id="desc"
+            name="desc"
+            value={desc}
+            onChange={handleOnChange}
+            required
+          />
         </div>
-        <button type="submit" className={styles.btn}> Submit </button>
+        <button type="submit" className={styles.btn}>
+          {" "}
+          Submit{" "}
+        </button>
       </form>
     </div>
   );

@@ -42,7 +42,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 .title {
@@ -121,7 +121,7 @@
 }
 
 .myImg {
-  border-radius: 60px;
+  border-radius: 150px;
 }
 
 .imgWrapper {
@@ -151,4 +151,17 @@
 .p {
   margin: 15px 0px;
   margin-top: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainnav ul li {
+    margin: 0 6px;
+    list-style: none;
+    font-weight: bold;
+  }
+  .title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 1.7rem;
+  }
 }
